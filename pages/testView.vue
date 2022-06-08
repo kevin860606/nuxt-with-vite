@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <body>
     <div>
       <a-select default-value="漢堡" style="width: 120px">
         <a-select-option value="漢堡">
@@ -17,24 +17,35 @@
       數量 :
     <a-input-number id="inputNumber" v-model="value" :min="0" style="margin-left: 1px; width:70px;" />
     </div>
-  </div>
+
+  </body>
 </template>
 
 <script>
 export default {
   name: 'WinniePage',
-  async asyncData({app}) {
-    const asd = await app.$axios.$get(`https://reqres.in/api/user/2`);
-    console.log(asd);
-    return { asd }
-  },
+  // async asyncData({app}) {
+  //   const { api } = app;
+  //   const response = await api.$get('user2');
+  //   console.log(response);
+  //   return { response }
+  // },
   data() {
     return {
-      value: 1,
-      menu:[]
+      value: 0,
+      menu:[],
+      items:[]
     };
   },
   mounted() {
+    this.getApi();
+  },
+  methods: {
+    getApi() {
+      const response = this.$get(`user2`)
+      this.items = response
+      console.log(response);
+    }
   },
 }
 </script>
