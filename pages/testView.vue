@@ -23,18 +23,32 @@
 <script>
 export default {
   name: 'WinniePage',
-  async asyncData({app}) {
-    const asd = await app.$axios.$get(`https://reqres.in/api/user/2`);
-    console.log(asd);
-    return { asd }
+//   async asyncData({app}) {
+//     const asd = await app.$axios.$get(`https://reqres.in/api/user/2`);
+//     console.log(asd);
+//     return { asd }
+//   },
+async  asyncData({$order}) {
+	 const eee= 1;
+    const asd = await $order.list() ;
+	const qwe = await $order.list() ;
+	console.log(asd);
+	console.log(qwe);
+	return {eee};
   },
+// 	asyncData(ctx){
+// 	const asd =  ctx;
+//   const eee = 1
+// 	console.log(asd);
+// 	return { eee }
+// 	},
   data() {
     return {
       value: 1,
       menu:[]
     };
   },
-  mounted() {
-  },
+  // mounted() {
+  // },
 }
 </script>

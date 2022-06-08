@@ -1,4 +1,4 @@
-# WinnieBear
+# Nust With Vite For Training
 
 ## Build Setup
 

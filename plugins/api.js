@@ -1,6 +1,7 @@
-import order from "~/api/order"
+import order from "~/api/order.js"
 
-export default ( ctx , inject) => {
+export default ( app , inject) => {
 	// Set the function directly on the context.app object
-	inject('order', order(ctx.$axios))
+	// const repositoryWithAxios = order(app.$axios)
+	inject('order', order(app.$axios))
   }
