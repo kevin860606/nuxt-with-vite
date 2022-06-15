@@ -18,7 +18,7 @@ export default {
   css: ['ant-design-vue/dist/antd.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-//   plugins: ['@/plugins/antd-ui', { src: '~/plugins/api.js', mode: 'server' }],
+  // plugins: ['@/plugins/antd-ui', { src: '~/plugins/api.js', mode: 'server' }],
 	plugins: ['~/plugins/antd-ui.js', '~/plugins/api.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -28,6 +28,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+	'@nuxtjs/moment',
 	'nuxt-vite',
   ],
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <a-select default-value="漢堡" style="width: 120px">
+      <a-select default-value="漢堡" style="width: 120px;">
         <a-select-option value="漢堡">
           漢堡
         </a-select-option>
@@ -23,32 +23,19 @@
 <script>
 export default {
   name: 'WinniePage',
-//   async asyncData({app}) {
-//     const asd = await app.$axios.$get(`https://reqres.in/api/user/2`);
-//     console.log(asd);
-//     return { asd }
-//   },
-async  asyncData({$order}) {
-	 const eee= 1;
-    const asd = await $order.list() ;
+	async  asyncData({$order}) {
+	const eee= 1;
 	const qwe = await $order.list() ;
-	console.log(asd);
 	console.log(qwe);
 	return {eee};
   },
-// 	asyncData(ctx){
-// 	const asd =  ctx;
-//   const eee = 1
-// 	console.log(asd);
-// 	return { eee }
-// 	},
   data() {
     return {
       value: 1,
-      menu:[]
+      menu:[],
     };
   },
-  // mounted() {
-  // },
+  mounted() {
+  },
 }
 </script>
